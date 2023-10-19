@@ -1,5 +1,5 @@
 /* 
-Las notas de María, Juan y Luis en los 3 exámenes de evaluación son respectivamente:
+Las notas de María, Juan y Luis en los exámenes de evaluación son respectivamente:
 
 María: 10, 3, 6, 7
 Juan: 5, 6, 1, 4
