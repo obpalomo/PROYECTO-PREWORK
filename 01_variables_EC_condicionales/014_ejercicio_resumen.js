@@ -31,12 +31,43 @@ let gondor = {
     - gondor: infanteria = 1000, caballería = 200, catapultas = 5; - saruman: orcos = 1500, trolls = 20, nazguls = 5;
 */
 
-if (/* MI POTENCIA */ > /* LOS MALOS */) {
-    console.log('atacar');
-} else if () {
-
-} else if () {
-
-} else {
-
+let gondor = {
+    infanteria : 1000,
+    caballeria : 200,
+    catapultas : 5
 }
+
+let saruman = {
+    orcos : 1500,
+    trolls : 20,
+    nazguls : 5 
+}
+
+let puntosGondor = (gondor.infanteria * 1) + (gondor.caballeria * 5) + (gondor.catapultas * 20);
+let puntosSaruman = (saruman.orcos * 1) + (saruman.trolls * 10) + (saruman.nazguls * 50);
+
+console.log('puntosGondor', puntosGondor, 'puntosSaruman', puntosSaruman);
+
+console.log('corremos?', puntosSaruman > puntosGondor);
+
+
+if ( puntosGondor > puntosSaruman ) {
+    console.log('bloque if else', 'atacar');
+} else if (puntosGondor == puntosSaruman) {
+    console.log('bloque if else', 'mantener línea');
+} else if (puntosSaruman > puntosGondor) {
+    console.log('bloque if else', 'llamar refuerzos');
+} else {
+    console.log('bloque if else', 'salir corriendo');
+}
+
+
+if (puntosGondor > puntosSaruman) {
+    console.log('luchamos');
+} else {
+    console.log('huir');
+}
+
+let ternaria = puntosGondor > puntosSaruman ? 'luchamos' : 'huir';
+
+console.log('ternaria', ternaria);

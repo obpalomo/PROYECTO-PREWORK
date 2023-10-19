@@ -56,6 +56,15 @@ const honey = {
     }
 }
 
+/* 6. ARRAY */
+
+let arrayGatos = [misifu, honey];
+let arrayNumeros = [1, 2, 5, 6, 7, 999];
+
+console.log('array gatos', arrayGatos);
+console.log('misifu', arrayGatos[0]);
+
+
 
 /* EJERCICIOS */
 

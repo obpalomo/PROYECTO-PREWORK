@@ -10,8 +10,6 @@ if (llueve) {
 
 */
 
-/* dfsfd */
-
 /* 2. IF - ELSE */
 
 let cerrarVentana;
@@ -38,6 +36,8 @@ if (soldados > orcos) {
 
 /* . TERNARIO */
 
+let ternario = soldados > 200 ? 'tengo mas de 200' : 'tengo menos de 200 o 200';
+console.log('ternario', ternario);
 
 
 /* EJERCICIOS */
@@ -54,7 +54,7 @@ if(number1 === 10){
 
 */
 
-if ((number2 / number1) == 2) {
+/* if ((number2 / number1) == 2) {
     console.log("number2 dividido entre number1 es igual a 2");
 }
 
@@ -76,5 +76,5 @@ if (((number3 * 5) == number1) && ((number1 * 2) == number2)) {
 
 if (((number2 / 2) == number1) || ((number1 / 5) == number3)) {
   console.log("number2 entre 2 es igual a number1 O number1 entre 5 es igual a number3");
-}
+} */
 
