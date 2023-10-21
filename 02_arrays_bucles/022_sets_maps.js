@@ -121,3 +121,32 @@ console.log(newToysArray);
 let rowAcolA = 'algo'; // extraer de mi mapa el parametro A del juguete uno. 
 let rowAcolB = 'algo'; // extraer de mi mapa el parametro A del juguete uno.
 let rowAcolC = 'algo'; // extraer de mi mapa el parametro A del juguete uno.
+
+
+
+let ddexMap = new Map();
+let marea = {nombreArtista: 'Marea', genero: 'rock urbano', disco: 'besos de perro', discografica: 'independiente'};
+let extremoduro = {nombreArtista: 'Extremoduro', genero: 'rock urbano', disco: 'la ley innata', discografica: 'warner'};
+let rosalia = {nombreArtista: 'Rosalia', genero: 'flamenco - hip-hop', disco: 'motomami', discografica: 'sony'};
+
+ddexMap.set(marea, 'enviado_distribuidora');
+ddexMap.set(extremoduro, 'conflicto_derechos');
+ddexMap.set(rosalia, 'faltan_datos');
+
+function notificarAVentas(nombreArtista, discografica) {
+    // logica que hara que a la persona que figura en BBDD como de ventas le llega un correo con la informacion.
+}
+
+
+for (let [k, v] of ddexMap) {
+    if (v == 'faltan_datos') {
+        notificarAVentas(k.nombreArtista, k.discografica);
+    }
+}
+
+
+
+
+
+
+

@@ -137,34 +137,7 @@ desde n hasta 1, voy a hacer la division, para que sea primo, la division tiene 
 
 /* una vez decido que n es primo, lo tengo que sumar a los anteriores primos, hasta hacerlo 100 veces */
 
-// 2. el resto es 0 si 1 o n.
-// 1. el resto no puede ser 0
-// vamos a confiar en que n es primo.
-
-
-let suma = 0;
-let index = 1;
-let n = 1;
-
-while (index < 20) {
-    let isPrimo = true;
-    for (let i = 0; i < n; i++) {
-        if (i != n && i != 1) {
-            if (n % i == 0) {
-                isPrimo = false;
-                console.log(i, n, index);
-            }
-        }
-    }
-    suma = n++;
-    n++;
-    index++;
-}
-
-console.log(suma);
-    
-
-
+ 
 //console.log(isPrimo);
 
 
