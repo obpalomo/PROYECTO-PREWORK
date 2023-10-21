@@ -78,6 +78,8 @@ const toys = [
 	{id: 40, name: 'El gato felix', sellCount: 35} //
 ]
 
+
+
 for (let toy of toys) {
     if (toy.sellCount > 14) {
         popularToys.push(toy);
@@ -94,7 +96,28 @@ let toy2 = {id: 40, name: 'El gato con Guantes'}; // 8
 let toy3 = {id: 40, name: 'El gato felix'}; // 35 
 
 // insertar los toy en el mapa
+toysMap.set(toy1, 15);
+toysMap.set(toy2, 8);
+toysMap.set(toy3, 35);
 
 // iterar el mapa y guardar los que tengan mas de 14
-
+for (let [k, v] of toysMap) {
+    if (v > 14) {
+        newToysArray.push(k);
+    }
+}
 // imprimir el array nuevo
+console.log(newToysArray);
+
+
+// EJERCICIO
+// rellenar la tabla de index.html con los datos de nuestro Map.
+// columna A: id
+// columna B: name
+// columna C: sellCount
+// OPCIONAL: dar estilos y formato a la tabla.
+
+
+let rowAcolA = 'algo'; // extraer de mi mapa el parametro A del juguete uno. 
+let rowAcolB = 'algo'; // extraer de mi mapa el parametro A del juguete uno.
+let rowAcolC = 'algo'; // extraer de mi mapa el parametro A del juguete uno.

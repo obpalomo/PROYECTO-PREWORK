@@ -63,7 +63,7 @@ let meses = ['marzo', 'abril', 'mayo'];
  */
 
 // EJERCICIOS:
-// a: hacer el método .includes con un bucle, testarlo con:
+// EJERCICIO A: hacer el método .includes con un bucle, testarlo con:
 
 var arrayCoches2 = ['ferrari', 'audi', 'seat', 'dacia', 'bmw', 'chevrolet', 'toyota', 'kia'];
 
@@ -79,21 +79,7 @@ for (let i = 0; i < arrayCoches2.length; i++) {
 } 
 //console.log('for bmw', isBmw);
 
-
-/* if (arrayCoches2.includes('ferrari')) {
-    console.log('ferrari');
-} else if (arrayCoches2.includes('audi')) {
-    console.log('audi');
-} else if (arrayCoches2.includes('alfa romeo')) {
-    console.log('alfa romeo');
-} else if (arrayCoches2.includes('bmw')) {
-    console.log('bmw');
-}
- */
-
-/*
-let names = ['juan', 'ramón', 'julio', 'ana', 'beatriz'] */
-// b: dado el array ['juan', 'ramón', 'julio', 'ana', 'beatriz'], añadir un nombre nuevo detras de cada uno existente usando bucles.
+// EJERCICIO B: dado el array ['juan', 'ramón', 'julio', 'ana', 'beatriz'], añadir un nombre nuevo detras de cada uno existente usando bucles.
 let names = ['juan', 'ramón', 'julio', 'ana', 'beatriz'];
 let names2 = ['facundo', 'arturo', 'agapito', 'remigio', 'anselmo']
 let newNames = new Array();
@@ -109,7 +95,7 @@ names.forEach((element, index) => { // esto (una funcion lambda) es igual que po
 });
 //console.log('newNamesForEach', newNamesForEach);
 
-// c: averigua si el número 2 existe en la siguiente matriz usando solo bucles:
+// EJERCICIO C: averigua si el número 2 existe en la siguiente matriz usando solo bucles:
 let matriz = [
     [1,2,4],
     [2,3,4],
