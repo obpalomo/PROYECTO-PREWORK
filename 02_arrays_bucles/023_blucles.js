@@ -19,14 +19,12 @@ let gato2 = {edad: 1, nombre: 'honey'}; */
 
 /* 1B. FOREACH */
 
-/* arrayCoches.forEach(element => {
-    arrayCorregido.push(element.toUpperCase());
-}); */
+arrayCoches.forEach(element => {
+    arrayCorregido.push(element.charAt(0).toUpperCase().concat(element.slice(1)))
+});
 
-//console.log(arrayCorregido);
-
-
-
+//console.log('corregido:::', arrayCorregido);
+// console.log('coches:::', arrayCoches);
 
 /* 2. OTROS BUCLES: while, do while,  */
 
@@ -64,11 +62,6 @@ let meses = ['marzo', 'abril', 'mayo'];
 }
  */
 
-/* 3A. FOR OF */
-
-/* 3B. FOR IN */
-
-
 // EJERCICIOS:
 // a: hacer el método .includes con un bucle, testarlo con:
 
@@ -84,10 +77,10 @@ for (let i = 0; i < arrayCoches2.length; i++) {
         isBmw = false;
     }
 } 
-console.log('for bmw', isBmw);
+//console.log('for bmw', isBmw);
 
 
-if (arrayCoches2.includes('ferrari')) {
+/* if (arrayCoches2.includes('ferrari')) {
     console.log('ferrari');
 } else if (arrayCoches2.includes('audi')) {
     console.log('audi');
@@ -96,24 +89,104 @@ if (arrayCoches2.includes('ferrari')) {
 } else if (arrayCoches2.includes('bmw')) {
     console.log('bmw');
 }
+ */
 
-
-/* let isIncluded = ('ana');
+/*
 let names = ['juan', 'ramón', 'julio', 'ana', 'beatriz'] */
 // b: dado el array ['juan', 'ramón', 'julio', 'ana', 'beatriz'], añadir un nombre nuevo detras de cada uno existente usando bucles.
+let names = ['juan', 'ramón', 'julio', 'ana', 'beatriz'];
+let names2 = ['facundo', 'arturo', 'agapito', 'remigio', 'anselmo']
+let newNames = new Array();
+let newNamesForEach = new Array()
+for (let i = 0; i < names.length; i++) {
+ newNames.push(names[i], names2[i])
+}
+//console.log('newNames', newNames);
 
-
+// se puede hacer así, pero es spoiler (lo veremos en funciones):
+names.forEach((element, index) => { // esto (una funcion lambda) es igual que poner function(element, index) {} (una función anónima)
+    newNamesForEach.push(element, names2[index]);
+});
+//console.log('newNamesForEach', newNamesForEach);
 
 // c: averigua si el número 2 existe en la siguiente matriz usando solo bucles:
-/* let matriz = [
+let matriz = [
     [1,2,4],
     [2,3,4],
     [5,6,7]
-] */
-// d: saca por cada consola el sumatorio de cada array dentro de matriz, usa solo bucles.
+]
 
-// e: dados los siguentes objetos tipo coche:
-/* let cocheA = {marca: 'seat', matriculacion: 2008, etiqueta: '?'};
-let cocheB = {marca: 'alfa romeo', matriculacion: 2000, etiqueta: '?'};
-let cocheC = {marca: 'bmw', matriculacion: 2019, etiqueta: '?'}; */
-// guarda todos los coches en un array y, mediante bucles, itéralo para asignar a cada coche su etiqueta corresponciente (<2006 -> A, 2006 - 2012 -> B, >2012 -> C)
+let isTwo = false;
+for (let i = 0; i < matriz.length; i++) {
+    for(let j = 0; j < matriz[i].length; j++) {
+        if(matriz[i][j] == 2) {
+            isTwo = true;
+            break;
+        }
+    }
+}
+//console.log('isTwo', isTwo);
+
+let isTwoFE = false;
+matriz.forEach(arr => {
+    arr.forEach(number => {
+        if (number == 2) {
+            isTwoFE = true;
+            return; // esto también es spoiler, lo veremos en funciones.
+        }
+    });
+});
+//console.log('isTwoFE', isTwoFE);
+
+// EJERCICIO D: saca por cada consola el sumatorio de cada array dentro de matriz, usa solo bucles.
+
+// EJERCICIO E: crea un bucle que sume los 100 primeros números primos.
+// numero primo es el que solo se puede dividir por si mismo y por 1.
+
+// crear bucle
+// crear variables
+
+/* n 
+desde n hasta 1, voy a hacer la division, para que sea primo, la division tiene que ser decimal en todos menos en n y 1 */
+
+/* una vez decido que n es primo, lo tengo que sumar a los anteriores primos, hasta hacerlo 100 veces */
+
+// 2. el resto es 0 si 1 o n.
+// 1. el resto no puede ser 0
+// vamos a confiar en que n es primo.
+
+
+let suma = 0;
+let index = 1;
+let n = 1;
+
+while (index < 20) {
+    let isPrimo = true;
+    for (let i = 0; i < n; i++) {
+        if (i != n && i != 1) {
+            if (n % i == 0) {
+                isPrimo = false;
+                console.log(i, n, index);
+            }
+        }
+    }
+    suma = n++;
+    n++;
+    index++;
+}
+
+console.log(suma);
+    
+
+
+//console.log(isPrimo);
+
+
+
+
+
+//console.log(primos);
+
+
+
+

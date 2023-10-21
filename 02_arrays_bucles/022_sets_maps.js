@@ -15,11 +15,86 @@ conjunto.forEach(item => {
 
 let mapa = new Map();
 
-mapa.set('kay1', 'value1');
-
-
+mapa.set('key1', 'value1');
 mapa.get('key1');
 
-for (let [k, v] of mapa) {
-    console.log(k, '=', v);
+let michifu = {
+    raza: 'gato',
+    edad: 5
 }
+let morris = {
+    raza: 'perro',
+    edad: 6
+}
+
+let mascotasMap = new Map();
+mascotasMap.set(michifu, 'no dar lentejas');
+mascotasMap.set(morris, 'sacar a las 9');
+
+/* 3A. FOR OF */
+
+for ( let [k, v] of mascotasMap ) {
+    console.log('key', k);
+    console.log('value', v);
+}
+
+let numeros = [2,3,4,5,55,23,90,123];
+
+for (let numero of numeros) {
+    console.log('arr value', numero);
+}
+
+/* 3B. FOR IN */
+
+let coche = {
+    marca : 'bmw',
+    modelo : 'serie 1',
+    color : 'azul',
+    matricula : '1234DDD',
+    etiqueta : 'ECO'
+}
+
+for ( let param in coche ) {
+    console.log(param, coche[param]);
+}
+
+
+/* for (let [k, v] of mascotasMap) {
+    console.log(k, '=', v);
+} */
+
+
+/* EJERCICIOS */
+
+/* Usa un bucle **for...of** para recorrer todos los juguetes y añade los que tengan más de 15 ventas (sellCount) al array popularToys. Imprimelo por consola.. Puedes usar este array:
+ */
+
+let popularToys = [];
+const toys = [
+	{id: 5, name: 'Buzz MyYear', sellCount: 10}, 
+	{id: 11, name: 'Action Woman', sellCount: 24}, 
+	{id: 23, name: 'Barbie Man', sellCount: 15}, 
+	{id: 40, name: 'El gato con Guantes', sellCount: 8},
+	{id: 40, name: 'El gato felix', sellCount: 35} //
+]
+
+for (let toy of toys) {
+    if (toy.sellCount > 14) {
+        popularToys.push(toy);
+    } 
+}
+
+console.log(popularToys);
+
+
+let toysMap = new Map();
+let newToysArray = new Array();
+let toy1 = 	{id: 23, name: 'Barbie Man'}; // 15
+let toy2 = {id: 40, name: 'El gato con Guantes'}; // 8
+let toy3 = {id: 40, name: 'El gato felix'}; // 35 
+
+// insertar los toy en el mapa
+
+// iterar el mapa y guardar los que tengan mas de 14
+
+// imprimir el array nuevo
