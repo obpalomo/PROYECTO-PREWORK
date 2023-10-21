@@ -4,12 +4,14 @@
 
 /* 1B. FOREACH */
 
-/* 1C. FOR OF */
-
-/* 1D. FOR IN */
 
 
-/* OTROS BUCLES: while, do while,  */
+
+/* 2. OTROS BUCLES: while, do while,  */
+
+/* 3A. FOR OF */
+
+/* 3B. FOR IN */
 
 
 // EJERCICIOS:
