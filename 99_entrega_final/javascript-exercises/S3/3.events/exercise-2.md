@@ -1,3 +1,6 @@
+Basandote en el siguiente html, añade un evento 'focus' que ejecute un console.log con el valor del input.
+
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,6 +9,7 @@
     <title>Document</title>
 </head>
 <body>
-    
+  <input type="text"/>
 </body>
 </html>
+```
